@@ -8,6 +8,13 @@ body.lb-disable-scrolling {
   overflow: hidden;
 }
 
+h1  {
+  font-size: 50px;
+text-align: left;
+font-family: 'Josefin Slab', serif;
+
+}
+
 .lightboxOverlay {
   position: absolute;
   top: 0;
@@ -42,12 +49,12 @@ body.lb-disable-scrolling {
 
 .lb-outerContainer {
   position: relative;
-  background-color: white;
+  background-color: black;
   *zoom: 1;
   width: 250px;
   height: 250px;
   margin: 0 auto;
-  border-radius: 4px;
+  border-radius: 0px;
 }
 
 .lb-outerContainer:after {
@@ -232,7 +239,7 @@ a, a:hover, a:focus {
 
 .img-box{
 
-width: 22%;
+width: 30%;
 height: 22%;
 
 }
@@ -328,7 +335,7 @@ padding :0;
 #sidebar {
     min-width: 250px;
     max-width: 250px;
-    background: #515668;
+    background: #6E470B;
     color: #fff;
     transition: all 0.6s cubic-bezier(0.945, 0.020, 0.270, 0.665);
     transform-origin: bottom left;
@@ -341,7 +348,7 @@ padding :0;
 
 #sidebar .sidebar-header {
     padding: 20px;
-    background: #9e9da5;
+    background: #AA8347;
 }
 
 #sidebar ul.components {
@@ -411,8 +418,22 @@ a.download {
 }
 
 a.article, a.article:hover {
-    background: #6d7fcc !important;
+    background: #3b5998 !important;
     color: #fff !important;
+}
+
+.parallax {
+    /* The image used */
+    background-image: url("https://cdn.gratisography.com/photos/392H.jpg");
+
+    /* Set a specific height */
+    min-height: 500px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 
@@ -427,6 +448,7 @@ a.article, a.article:hover {
 }
 
 #sidebarCollapse {
+  margin-top: 25px;
     width: 40px;
     height: 40px;
     background: #f5f5f5;
@@ -495,29 +517,6 @@ a.article, a.article:hover {
 }
 
 
-.myImg {
-   
-    cursor: pointer;
-
-}
-
-.myImg:hover {
-
-    opacity: 0.7;
-
-
-}
-
-
-.grelha:hover .image{
-    opacity: 0.3;
-
-}
-
-.grelha:hover .textoimagembloco {
-  opacity: 1;
-}
-
 .image {
   opacity: 1;
   display: block;
@@ -527,7 +526,8 @@ a.article, a.article:hover {
   backface-visibility: hidden;
 }
 
-.textoimagembloco {
+.middle {
+
   transition: .5s ease;
   opacity: 0;
   position: absolute;
@@ -536,95 +536,23 @@ a.article, a.article:hover {
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   text-align: center;
+
+
 }
 
-.textoimagem {
-  background-color: #4CAF50;
-  color: white;
-  font-size: 16px;
+.container:hover .image {
+  opacity: 0.8;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  
+  color: #cccc00;
+  font-size: 25px;
   padding: 16px 32px;
+  font-family: 'Titan One', cursive;
 }
-
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 15%; /* Location of the box */
-    padding-left: 32%;
-    margin: auto;
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
-}
-
-/* Modal Content (image) */
-.modal-content {
-    margin: auto;
-    display: block;
-    width: 100%;
-    max-width: 700px;
-
-}
-
-/* Caption of Modal Image */
-#caption {
- 
-    display: block;
-    width: 80%;
-    max-width: 700px;
-    text-align: center;
-    color: #ccc;
-    padding: 10px 0;
-    height: 150px;
-}
-
-/* Add Animation */
-.modal-content, #caption {    
-    -webkit-animation-name: zoom;
-    -webkit-animation-duration: 0.6s;
-    animation-name: zoom;
-    animation-duration: 0.6s;
-}
-
-@-webkit-keyframes zoom {
-    from {-webkit-transform:scale(0)} 
-    to {-webkit-transform:scale(1)}
-}
-
-@keyframes zoom {
-    from {transform:scale(0)} 
-    to {transform:scale(1)}
-}
-
-/* The Close Button */
-.close {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    color: #f1f1f1;
-    font-size: 40px;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.close:hover,
-.close:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-/* 100% Image Width on Smaller Screens */
-@media only screen and (max-width: 700px){
-    .modal-content {
-        width: 100%;
-    }
-}
-
-
 
